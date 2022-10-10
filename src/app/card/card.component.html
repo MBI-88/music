@@ -1,0 +1,42 @@
+<form class="form-control mt-sm-5 mt-3 p-sm-2  search-form ">
+  <input type="text" class="form-control mb-2  w-auto" id="formSearch" placeholder="Autor..." #asearch>
+  <input type="text" class="form-control mb-2 w-auto" id="formSearch" placeholder="Liric..." #msearch>
+  <button type="button" class="form-control w-auto" (click)="submitEvent(asearch.value,msearch.value)">Submit</button>
+</form>
+
+<div class="row row-cols-sm-2 row-cols-1 text-center mt-3 card-bg p-3" *ngIf="showWeather">
+  <div class="col">
+    <img class="img-fluid  w-50 rounded-circle" [src]="autor.artists[0].strArtistThumb" alt="...">
+  </div>
+  <div class="col">
+    <h4 class="card-title text-start">
+      <blockquote><b>{{autor.artists[0].strArtist}}</b></blockquote>
+    </h4>
+    <h6 class="card-title text-start">Label: {{autor.artists[0].strLabel}}</h6>
+    <h6 class="card-title text-start">Formed: {{autor.artists[0].intFormedYear}}</h6>
+    <h6 class="card-title text-start">Born: {{autor.artists[0].intBornYear}}</h6>
+    <h6 class="card-title text-start">Died: {{autor.artists[0].intDiedYear}}</h6>
+    <h6 class="card-title text-start">Style: {{autor.artists[0].strStyle}}</h6>
+    <h6 class="card-title text-start">Genre: {{autor.artists[0].strGenre}}</h6>
+    <h6 class="card-title text-start">Wesite: <a class="nav-link text-start" [href]="autor.artists[0].strWebSite"
+        target="_blank">{{autor.artists[0].strWebSite}}</a></h6>
+    <h6 class="card-title text-start">Country: {{autor.artists[0].strCountry}}</h6>
+    <h6 class="card-title text-start">Gender: {{autor.artists[0].strGender}}</h6>
+  </div>
+  <div class="col ">
+    <h6 class="card-title text-center pt-2">
+      <blockquote><b>Biography</b> </blockquote>
+    </h6>
+    <p class="card-text  ">
+      {{autor.artists[0].strBiographyEN}}
+    </p>
+  </div>
+  <div class="col ">
+    <h6 class="card-title text-center pt-2">
+      <blockquote><b>Lyrics</b> </blockquote>
+    </h6>
+    <p class="card-text ">
+      {{music.lyrics}}
+    </p>
+  </div>
+</div>

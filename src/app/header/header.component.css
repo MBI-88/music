@@ -1,0 +1,16 @@
+.bg-navbar {
+    background: #2c1338;
+    height: calc( 100vh / 0.5);
+    width: auto;
+    overflow-y: auto;
+    
+    
+}
+
+@media screen and (max-width:400px) {
+    .bg-navbar{
+        height: auto;
+        width: auto;
+   
+    }
+}
